@@ -24,7 +24,7 @@ on:
 jobs:
   build:
     name: Build
-    if: github.repository == 'hululuxi/Marlin-2-0-x-Anycubic-i3-MEGA-S'
+    if: github.repository == 'hululuxi/Marlin-2-0-x-Anycubic-4Max-Pro'
 
     runs-on: ubuntu-latest
 
