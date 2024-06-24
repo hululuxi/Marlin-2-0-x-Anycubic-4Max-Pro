@@ -108,7 +108,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(knutwurst)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Anycubic)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -135,7 +135,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_TRIGORILLA_14
 #endif
 
 /**
@@ -202,7 +202,7 @@
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
 
 // @section stepper drivers
 
@@ -637,7 +637,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define TEMP_SENSOR_0 11
+  #define TEMP_SENSOR_0 5
 #else
   #define TEMP_SENSOR_0 1
 #endif
@@ -728,9 +728,9 @@
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define HEATER_0_MAXTEMP 300
-#else
   #define HEATER_0_MAXTEMP 285
+#else
+  #define HEATER_0_MAXTEMP 275
 #endif
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
@@ -739,7 +739,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
+#define BED_MAXTEMP      110
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -795,9 +795,9 @@
   #endif
 
   #if ENABLED(KNUTWURST_4MAXP2)
-    #define DEFAULT_Kp 17.13
-    #define DEFAULT_Ki 0.93
-    #define DEFAULT_Kd 78.58
+    #define DEFAULT_Kp 11.96
+    #define DEFAULT_Ki 0.41
+    #define DEFAULT_Kd 58.49
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -895,9 +895,9 @@
     #define DEFAULT_bedKi    1.41
     #define DEFAULT_bedKd 1675.16
   #elif ENABLED(KNUTWURST_4MAXP2)
-    #define DEFAULT_bedKp 251.78
-    #define DEFAULT_bedKi 49.57
-    #define DEFAULT_bedKd 319.73
+    #define DEFAULT_bedKp 90.00
+    #define DEFAULT_bedKi 0.82
+    #define DEFAULT_bedKd 305.40
   #endif
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
@@ -1396,7 +1396,7 @@
 #endif
 
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 80, 800, 415 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100.06, 80.06, 800.00, 400.00 }
 #endif
 
 /**
@@ -1437,7 +1437,7 @@
 #endif
 
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define DEFAULT_MAX_FEEDRATE          { 150, 150, 18, 80 }
+  #define DEFAULT_MAX_FEEDRATE          { 150, 150, 20, 80 }
 #endif
 
 
@@ -1466,13 +1466,13 @@
 #endif
 
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 70, 15000 }
+  #define DEFAULT_MAX_ACCELERATION      { 900, 900, 70, 15000 }
 #endif
 
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 1500, 1500, 200, 20000 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -1520,9 +1520,9 @@
 #endif
 
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define DEFAULT_ACCELERATION           800    // X, Y, Z and E acceleration for printing moves
-  #define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
-  #define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+  #define DEFAULT_ACCELERATION          700    // X, Y, Z and E acceleration for printing moves
+  #define DEFAULT_RETRACT_ACCELERATION  900    // E acceleration for retracts
+  #define DEFAULT_TRAVEL_ACCELERATION   800    // X, Y, Z acceleration for travel (non printing) moves
 #endif
 
 /**
@@ -1548,8 +1548,8 @@
     #define DEFAULT_YJERK  4.0
     #define DEFAULT_ZJERK  0.4
   #elif ENABLED(KNUTWURST_4MAXP2)
-    #define DEFAULT_XJERK  8.0
-    #define DEFAULT_YJERK  8.0
+    #define DEFAULT_XJERK  8.2
+    #define DEFAULT_YJERK  8.2
     #define DEFAULT_ZJERK  0.2
   #endif
 
@@ -2190,15 +2190,15 @@
     // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
     #define INVERT_X_DIR false // set to true for stock drivers or TMC2208 with reversed connectors
     #define INVERT_Y_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
-    #define INVERT_Z_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
+    #define INVERT_Z_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
 
     // @section extruder
 
     // For direct drive extruder v9 set to true, for geared extruder set to false.
     #if ENABLED(KNUTWURST_BMG)
-      #define INVERT_E0_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
-    #else
       #define INVERT_E0_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
+    #else
+      #define INVERT_E0_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
     #endif
     #define INVERT_E1_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
     #define INVERT_E2_DIR false
@@ -3532,8 +3532,8 @@
 //
 //#define SAV_3DGLCD
 #if ENABLED(SAV_3DGLCD)
-  #define U8GLIB_SSD1306
-  //#define U8GLIB_SH1106
+  //#define U8GLIB_SSD1306
+  #define U8GLIB_SH1106
 #endif
 
 //
@@ -3879,7 +3879,7 @@
 // However, control resolution will be halved for each increment;
 // at zero value, there are 128 effective control positions.
 // :[0,1,2,3,4,5,6,7]
-#define SOFT_PWM_SCALE 2
+#define SOFT_PWM_SCALE 3
 
 // If SOFT_PWM_SCALE is set to a value higher than 0, dithering can
 // be used to mitigate the associated resolution loss. If enabled,
@@ -3936,10 +3936,10 @@
 //#define RGBW_LED
 
 #if EITHER(RGB_LED, RGBW_LED)
-  //#define RGB_LED_R_PIN 34
-  //#define RGB_LED_G_PIN 43
-  //#define RGB_LED_B_PIN 35
-  //#define RGB_LED_W_PIN -1
+  #define RGB_LED_R_PIN 34
+  #define RGB_LED_G_PIN 43
+  #define RGB_LED_B_PIN 35
+  #define RGB_LED_W_PIN -1
 #endif
 
 #if ANY(RGB_LED, RGBW_LED, PCA9632)
