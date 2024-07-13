@@ -135,7 +135,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_TRIGORILLA_14
 #endif
 
 /**
@@ -637,7 +637,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define TEMP_SENSOR_0 5
+  #define TEMP_SENSOR_0 11
 #else
   #define TEMP_SENSOR_0 1
 #endif
@@ -795,9 +795,9 @@
   #endif
 
   #if ENABLED(KNUTWURST_4MAXP2)
-    #define DEFAULT_Kp 11.96
-    #define DEFAULT_Ki 0.41
-    #define DEFAULT_Kd 58.49
+    #define DEFAULT_Kp 17.13
+    #define DEFAULT_Ki 0.93
+    #define DEFAULT_Kd 78.58
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
