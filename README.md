@@ -1,5 +1,5 @@
 ## Anycubic 4max pro v1.0 firmware
-## Code from Knutwurst's i3 MEGA M/S/P/X/Chiron/4MP2 Hybrid Firmware <br>(based on Marlin 2.1.x)
+## Code fork from Knutwurst's i3 MEGA M/S/P/X/Chiron/4MP2 Hybrid Firmware <br>(based on Marlin 2.1.x)
 
 ## Übersicht
 
