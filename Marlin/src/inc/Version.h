@@ -33,7 +33,7 @@
  * vendor name, download location, GitHub account, etc.
  */
 #ifndef DETAILED_BUILD_VERSION
-  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " (knutwurst, Github)" // PATCH: Knutwurst
+  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " (Anycubic)"
 #endif
 
 /**
@@ -75,7 +75,7 @@
  * Define a generic printer name to be output to the LCD after booting Marlin.
  */
 #ifndef MACHINE_NAME
-  #define MACHINE_NAME "Knutwurst's Anycubic Printer"   // PATCH: Knutwurst
+  #define MACHINE_NAME "Anycubic 4Max Pro"
 #endif
 
 /**
@@ -84,14 +84,14 @@
  * providing the source code to your customers.)
  */
 #ifndef SOURCE_CODE_URL
-  #define SOURCE_CODE_URL "github.com/knutwurst/Marlin-2-0-x-Anycubic-i3-MEGA-S"    // PATCH: Knutwurst
+  #define SOURCE_CODE_URL "github.com/hululuxi/Marlin-2-0-x-Anycubic-4Max-Pro"    // PATCH: hululuxi
 #endif
 
 /**
  * Default generic printer UUID.
  */
 #ifndef DEFAULT_MACHINE_UUID
-  #define DEFAULT_MACHINE_UUID "b6153152-86fb-4cd8-bda7-91c6a04c467d"   // PATCH: Knutwurst
+  #define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"   // PATCH: hululuxi
 #endif
 
 /**
