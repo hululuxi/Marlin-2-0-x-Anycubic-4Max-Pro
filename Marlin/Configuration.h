@@ -795,9 +795,9 @@
   #endif
 
   #if ENABLED(KNUTWURST_4MAXP2)
-    #define DEFAULT_Kp 17.13
-    #define DEFAULT_Ki 0.93
-    #define DEFAULT_Kd 78.58
+    #define DEFAULT_Kp 11.96
+    #define DEFAULT_Ki 0.41
+    #define DEFAULT_Kd 58.49
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -3187,7 +3187,7 @@
 
 // Play a (non-earpiercing) startup chime on startup/serial connection
 // of the Trigorilla board
-#define STARTUP_CHIME
+//#define STARTUP_CHIME
 
 //
 // ENDSTOP BEEP
