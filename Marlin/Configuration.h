@@ -795,9 +795,9 @@
   #endif
 
   #if ENABLED(KNUTWURST_4MAXP2)
-    #define DEFAULT_Kp 11.96
-    #define DEFAULT_Ki 0.41
-    #define DEFAULT_Kd 58.49
+    #define DEFAULT_Kp 16.13
+    #define DEFAULT_Ki 0.80
+    #define DEFAULT_Kd 81.24
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
