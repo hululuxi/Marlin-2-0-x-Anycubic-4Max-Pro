@@ -1,4 +1,4 @@
-name: Build All Firmware Variants
+name: Build 4MaxPro Firmware
 
 on:
   #pull_request:
