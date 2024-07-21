@@ -308,7 +308,7 @@
     #define WATCH_TEMP_PERIOD   60               // (seconds)
     #define WATCH_TEMP_INCREASE  5               // (°C)
   #else
-    #define THERMAL_PROTECTION_PERIOD     20     // (seconds)
+    #define THERMAL_PROTECTION_PERIOD     3      // (seconds)
     #define THERMAL_PROTECTION_HYSTERESIS 15     // (°C)
 
     //#define ADAPTIVE_FAN_SLOWING              // Slow part cooling fan if temperature drops
@@ -328,8 +328,8 @@
      * and/or decrease WATCH_TEMP_INCREASE. WATCH_TEMP_INCREASE should not be set
      * below 2.
      */
-    #define WATCH_TEMP_PERIOD  30               // (seconds)
-    #define WATCH_TEMP_INCREASE 3               // (°C)
+    #define WATCH_TEMP_PERIOD  35               // (seconds)
+    #define WATCH_TEMP_INCREASE 5               // (°C)
   #endif
 #endif
 
@@ -347,13 +347,13 @@
     #define WATCH_BED_TEMP_PERIOD                300 // (seconds)
     #define WATCH_BED_TEMP_INCREASE                2 // (°C)
   #else
-    #define THERMAL_PROTECTION_BED_PERIOD        30 // (seconds)
+    #define THERMAL_PROTECTION_BED_PERIOD        20 // (seconds)
     #define THERMAL_PROTECTION_BED_HYSTERESIS     2 // (°C)
 
     /**
      * As described above, except for the bed (M140/M190/M303).
      */
-    #define WATCH_BED_TEMP_PERIOD               120 // (seconds)
+    #define WATCH_BED_TEMP_PERIOD                60 // (seconds)
     #define WATCH_BED_TEMP_INCREASE               2 // (°C)
   #endif
 #endif
