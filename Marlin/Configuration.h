@@ -1521,8 +1521,8 @@
 
 #if ENABLED(KNUTWURST_4MAXP2)
   #define DEFAULT_ACCELERATION          700    // X, Y, Z and E acceleration for printing moves
-  #define DEFAULT_RETRACT_ACCELERATION  900    // E acceleration for retracts
-  #define DEFAULT_TRAVEL_ACCELERATION   800    // X, Y, Z acceleration for travel (non printing) moves
+  #define DEFAULT_RETRACT_ACCELERATION  700    // E acceleration for retracts
+  #define DEFAULT_TRAVEL_ACCELERATION   700    // X, Y, Z acceleration for travel (non printing) moves
 #endif
 
 /**
